@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AgaveNerdFontMono';
-  src: url('/fontfile.ttf') format('truetype');
+  src: url('https://github.com/bloxain/bloxain/raw/main/fonts/AgaveNerdFont-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
