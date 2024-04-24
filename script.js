@@ -1,6 +1,7 @@
 /// execute_script.js
-if (new URL(window.location.href).hostname.match(/(^|.)youtube./)) setInterval(() => {
-    Array.from(document.querySelectorAll("head > style"))
-        .filter(el => !!el.textContent.match(/{s*displays*:s*nones+!importants*;?s*}/i))
-        .forEach(el => el.remove());
+window.setInterval(() => {
+    let els = Array.from(document.querySelectorAll("head > style"))
+        .filter(el => el.innerText.match(/{s*displays*:s*nones+!importants*;?s*}/i));
+    els.forEach(el => el.innerText = "");
+    if (els.length > 0) alert(`finished removing the ${els.length} youtube restructions boss! luphoria would be proud.`);
 }, 500);
